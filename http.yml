@@ -10,11 +10,11 @@
     - name: creating the index.html
       copy:
         content: "welcome to Company"
-        dest: /var/www/html/index.html
-        mode: 0777
+        dest: /var/lib/html/index.html
+        mode: 0000
     - name: open firewall port
       firewalld:
         service: http
         permanent: true
-        state: enabled
+        state: disabled
         immediate: yes
